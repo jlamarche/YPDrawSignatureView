@@ -5,9 +5,9 @@ I could not find a good signature capturer iOS made in Swift, so I gave it a try
 ## Fork
 This fork adds support for multiple line colors and widths within one signature. While most applications will want signatures to be black, I needed a bit more flexibility for one app I'm working on and thought I'd make the changes available for anyone else who wants to use them.
 
-The example app has been updated from the original to support very rudimentary color and line width changing to show. Very little has changed in terms of the view is used. The only substantive change is that stroke color and line width now only apply to what you draw in the future, it doesn't change the color or size of what's already been drawn.
+The example app has been updated from the original to support very rudimentary color and line width changing. Very little has changed in terms of how the original view is used. The only real difference is that stroke color and line width now only apply to what you draw in the future, changing them doesn't change the color or size of what's already been drawn.
 
-I've also removed the use of the `++` operator, since it's being removed in Swift 3.0
+I've also removed the use of the `++` operator for forward compatibility, since it's being removed in Swift 3.0
 
 ## Swift 2.2
 
