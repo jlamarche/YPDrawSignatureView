@@ -37,7 +37,8 @@ Geert-Jan Nilsen ( gert@yuppielabel.com )
 ## Contributors
 
 [TyrantFox](https://github.com/TyrantFox).
-[Jeff LaMarche] (https://github.com/jlamarche).
+
+[Jeff LaMarche](https://github.com/jlamarche).
 
 ## License
 
