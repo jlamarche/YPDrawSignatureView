@@ -73,4 +73,6 @@ public class YPDrawSignatureView: UIView {
 		UIGraphicsEndImageContext()
 		return signature
 	}
+	
+	
 }

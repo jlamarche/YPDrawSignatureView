@@ -189,9 +189,7 @@ public class Signature {
 			currentSegment!.points.append(convertedPoint)
 		} else { // square
 			currentSegment!.points.append(CGPointMake(point.x / sourceViewSize.width, point.y / sourceViewSize.height))
-		}
-		print ("Point: \(point) stored as \(currentSegment!.points.last!)")
-		
+		}		
 		
 		segments.removeLast()
 		segments.append(currentSegment!)

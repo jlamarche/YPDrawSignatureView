@@ -64,5 +64,9 @@ class ViewController: UIViewController {
 			drawSignatureView.lineWidth = 4.0
 		}
 	}
+	
+	override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+		self.drawSignatureView.setNeedsDisplay()
+	}
 }
 
