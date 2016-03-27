@@ -102,7 +102,8 @@ public class YPDrawSignatureView: UIView {
 	
 	// MARK: Save the Signature as an UIImage
 	public func getSignature() ->UIImage {
-		UIGraphicsBeginImageContext(CGSizeMake(self.bounds.size.width, self.bounds.size.height))
+		UIGraphicsBeginImageContextWithOptions(CGSizeMake(self.bounds.size.width, self.bounds.size.height), false, 8.0)
+		//UIGraphicsBeginImageContext(CGSizeMake(self.bounds.size.width, self.bounds.size.height))
 		self.layer.renderInContext(UIGraphicsGetCurrentContext()!)
 		let signature: UIImage = UIGraphicsGetImageFromCurrentImageContext()
 		UIGraphicsEndImageContext()
