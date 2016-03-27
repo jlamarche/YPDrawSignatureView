@@ -8,16 +8,6 @@
 
 import UIKit
 
-//public struct StrokeSegment {
-//	public var path: UIBezierPath!
-//	public var color: UIColor!
-//	init(path: UIBezierPath, color: UIColor, lineWidth: CGFloat) {
-//		self.path = path
-//		self.color = color
-//		self.path.lineWidth = lineWidth
-//	}
-//}
-
 public class YPDrawSignatureView: UIView {
 	
 	// MARK: - Public properties
