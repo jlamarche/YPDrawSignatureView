@@ -122,8 +122,31 @@ public class Signature {
 		currentSegment!.minY = max(currentSegment!.minY, 0.0)
 		
 	}
-	func pathsForViewOfSize(size:CGSize, smoothed:Bool = true) -> [StrokeSegment] {
+	/** returns UIBezierPaths to draw the signature in a view of a given size. Optionally, it will smooth the stroke based on a smooth step, or draw the signature line. 
+		@param size	The size of the view in paths will be drawn in
+		@param smoothed Whether to smooth the signature
+		@param smoothStep How aggressively to smooth the signature. The higher the number, the smoother the signature will appear, but with increasing loss lof fidelty
+		@param includeLine Whether to draw a horizontal black line below the signature
+	
+		@returns Array of SignatureSegments desribing the signature
+	*/
+	func pathsForViewOfSize(size:CGSize, smoothed:Bool = true, smoothStep: Int = 1, includeLine:Bool = true, linePosition:CGFloat = 0.75) -> [StrokeSegment] {
 		var ret = [StrokeSegment]()
+		
+		if (includeLine) {
+			
+			let path = UIBezierPath()
+			var padding:CGFloat = 0.0
+			let aspectRatio = size.width / size.height
+			
+			if (aspectRatio > 1.0) {
+				padding = (1.0 - ((size.height / size.width))) / 2.0
+			}
+
+			path.moveToPoint(CGPointMake(0.05 * size.width, (linePosition - padding) * size.height))
+			path.addLineToPoint(CGPointMake(0.95 * size.width, (linePosition - padding) * size.height))
+			ret.append(StrokeSegment(path: path, color: UIColor.blackColor(), lineWidth: 1.5))
+		}
 		
 		for oneSegment in segments {
 	
@@ -143,8 +166,8 @@ public class Signature {
 				}
 			} else {
 				var p1 = points[0]
-	
-				for i in 1...(points.count - 1) {
+				
+				for i in 1.stride(to: (points.count - 1), by: smoothStep) {
 					let p2 = points[i]
 					let midPoint = CGPoint.midPointForPoints(p1, p2: p2)
 					if (i == 1) {
@@ -155,6 +178,8 @@ public class Signature {
 					
 					p1 = p2
 				}
+				
+				
 			}
 			ret.append(StrokeSegment(path: path, color: oneSegment.color, lineWidth: oneSegment.lineWidth))
 		}
@@ -189,7 +214,7 @@ public class Signature {
 			currentSegment!.points.append(convertedPoint)
 		} else { // square
 			currentSegment!.points.append(CGPointMake(point.x / sourceViewSize.width, point.y / sourceViewSize.height))
-		}		
+		}
 		
 		segments.removeLast()
 		segments.append(currentSegment!)
