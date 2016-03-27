@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F7F22D11CA81ED80074C047 /* Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7F22D01CA81ED80074C047 /* Signature.swift */; };
 		4BE489E91C252F8B00741EAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE489E81C252F8B00741EAD /* AppDelegate.swift */; };
 		4BE489EB1C252F8B00741EAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE489EA1C252F8B00741EAD /* ViewController.swift */; };
 		4BE489EE1C252F8B00741EAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BE489EC1C252F8B00741EAD /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F7F22D01CA81ED80074C047 /* Signature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signature.swift; sourceTree = "<group>"; };
 		4BE489E51C252F8B00741EAD /* SignatureTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignatureTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE489E81C252F8B00741EAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BE489EA1C252F8B00741EAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				4BE489F11C252F8B00741EAD /* LaunchScreen.storyboard */,
 				4BE489F41C252F8C00741EAD /* Info.plist */,
 				4BE48A161C252FC600741EAD /* YPDrawSignatureView.swift */,
+				1F7F22D01CA81ED80074C047 /* Signature.swift */,
 			);
 			path = SignatureTest;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F7F22D11CA81ED80074C047 /* Signature.swift in Sources */,
 				4BE489EB1C252F8B00741EAD /* ViewController.swift in Sources */,
 				4BE489E91C252F8B00741EAD /* AppDelegate.swift in Sources */,
 				4BE48A171C252FC600741EAD /* YPDrawSignatureView.swift in Sources */,
@@ -488,6 +492,7 @@
 				4BE48A0F1C252F8F00741EAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4BE48A101C252F8F00741EAD /* Build configuration list for PBXNativeTarget "SignatureTestTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +501,7 @@
 				4BE48A121C252F8F00741EAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4BE48A131C252F8F00741EAD /* Build configuration list for PBXNativeTarget "SignatureTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +510,7 @@
 				4BE48A151C252F8F00741EAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
